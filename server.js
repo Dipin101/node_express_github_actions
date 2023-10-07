@@ -11,7 +11,11 @@ app.use(express.urlencoded({ extended: true })) // for parsing application/x-www
 
 //http://localhost:3000/
 app.get('/', function (req, res) {
-    res.send("<h1>Home Page</h1>")
+  const links = `<h3><a href="https://c0870340-dipinkhatri.azurewebsites.net/name"> Go to your name </a></h3><br>
+  <h3><a href="https://github.com/Dipin101/node_express_github_actions">Github Project</a></h3><br>
+  <h3><a href="https://c0870340-dipinkhatri.azurewebsites.net/admin">Go to admin page</a></h3>
+  `;
+    res.send(links);
 })
 
 //http://localhost:3000/
@@ -27,7 +31,7 @@ app.post('/profile', (req, res) => {
 
 //http://localhost:3000/admin
 app.get('/admin', (req, res) => {
-  res.send('Admin Homepage')
+  res.send('Welcome to Admin Homepage')
 })
 
 //http://localhost:3000/user/100
